@@ -29,12 +29,19 @@ public class App {
 //        System.out.println("Student is Added " + result);
         
         //Update the data
+//        Student student = new Student();
+//        student.setName("Shibu kumar Kumar");
+//        student.setCity("Delhi");
+//        student.setId(1);
+//        
+//        int result = studentDao.Update(student);
+//        System.out.println("Student Details Updated" + result);
+        
+        //Delete Query
         Student student = new Student();
-        student.setName("Shibu kumar Kumar");
-        student.setCity("Delhi");
         student.setId(1);
         
-        int result = studentDao.Update(student);
-        System.out.println("Student Details Updated" + result);
+        int result = studentDao.Delete(student);
+        System.out.println("Delete Student Sucessfull"+result);
     }
 }
