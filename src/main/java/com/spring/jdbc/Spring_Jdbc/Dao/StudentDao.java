@@ -5,4 +5,6 @@ import com.spring.jdbc.Spring_Jdbc.entities.Student;
 public interface StudentDao {
 
 	public int inset(Student student);
+	
+	public int Update(Student student);
 }

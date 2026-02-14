@@ -19,12 +19,22 @@ public class App {
         
         StudentDao studentDao = ioc.getBean("studentDao",StudentDao.class);
         
-        Student student = new Student();
-        student.setId(212227);
-        student.setName("raoShibu");
-        student.setCity("America");
+        //Insert the Data
+//        Student student = new Student();
+//        student.setId(212225);
+//        student.setName("Khan Sir");
+//        student.setCity("Noida");
+//        
+//        int result = studentDao.inset(student);
+//        System.out.println("Student is Added " + result);
         
-        int result = studentDao.inset(student);
-        System.out.println("Stusdent is Added " + result);
+        //Update the data
+        Student student = new Student();
+        student.setName("Shibu kumar Kumar");
+        student.setCity("Delhi");
+        student.setId(1);
+        
+        int result = studentDao.Update(student);
+        System.out.println("Student Details Updated" + result);
     }
 }
