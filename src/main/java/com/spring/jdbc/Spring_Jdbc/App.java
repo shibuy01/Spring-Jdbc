@@ -1,5 +1,7 @@
 package com.spring.jdbc.Spring_Jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -38,10 +40,20 @@ public class App {
 //        System.out.println("Student Details Updated" + result);
         
         //Delete Query
-        Student student = new Student();
-        student.setId(1);
+//        Student student = new Student();
+//        student.setId(1);
+//        
+//        int result = studentDao.Delete(student);
+//        System.out.println("Delete Student Sucessfull"+result);
         
-        int result = studentDao.Delete(student);
-        System.out.println("Delete Student Sucessfull"+result);
+        // Fetching Data Single Object
+//        Student student = studentDao.getStudent(111);
+//        System.out.println(student);
+        
+        // Fetchin Data Multiple Object
+        List<Student> students = studentDao.getAllStudent();
+        for(Student s : students) {
+        	System.out.println(s);
+        }
     }
 }
