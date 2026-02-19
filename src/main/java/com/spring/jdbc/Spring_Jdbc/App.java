@@ -3,6 +3,7 @@ package com.spring.jdbc.Spring_Jdbc;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.spring.jdbc.Spring_Jdbc.Dao.StudentDao;
@@ -17,7 +18,7 @@ public class App {
     	
         System.out.println( "My Program Started....." );
         
-        ApplicationContext ioc = new ClassPathXmlApplicationContext("com/spring/jdbc/Spring_Jdbc/config.xml");
+        ApplicationContext ioc = new AnnotationConfigApplicationContext(JdbcConfig.class);
         
         StudentDao studentDao = ioc.getBean("studentDao",StudentDao.class);
         
